@@ -75,6 +75,7 @@ persona(P) :- hombre(P) ; mujer(P).
 %Agregar una regla para identificar a un NIETO
 nieto(Y) :- padre(Z, X) , (padre(X, Y) ; madre(X, Y)), hombre(Y).
 %Agregar una regla para identificar a un NIETA
+nieta(Y) :- madre(Z, X) , (padre(X, Y) ; madre(X, Y)), mujer(Y).
 %Agregar una regla para identificar a los HERMANOS
 %Agregar una regla para identificar a las HERMANAS
 %Agregar una regla para identificar a las PAREJAS.
