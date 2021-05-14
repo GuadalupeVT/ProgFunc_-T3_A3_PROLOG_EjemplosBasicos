@@ -79,4 +79,5 @@ nieta(Y) :- madre(Z, X) , (padre(X, Y) ; madre(X, Y)), mujer(Y).
 %Agregar una regla para identificar a los HERMANOS
 hermanos(X,Y) :- ((madre(Z,X) , madre(Z,Y)); (padre(Z,X) , padre(Z,Y))), not(X==Y) , hombre(X), hombre(Y).
 %Agregar una regla para identificar a las HERMANAS
+hermanas(X,Y) :- ((madre(Z,X) , madre(Z,Y)); (padre(Z,X) , padre(Z,Y))), not(X==Y) , mujer(X), mujer(Y).
 %Agregar una regla para identificar a las PAREJAS.
