@@ -81,3 +81,4 @@ hermanos(X,Y) :- ((madre(Z,X) , madre(Z,Y)); (padre(Z,X) , padre(Z,Y))), not(X==
 %Agregar una regla para identificar a las HERMANAS
 hermanas(X,Y) :- ((madre(Z,X) , madre(Z,Y)); (padre(Z,X) , padre(Z,Y))), not(X==Y) , mujer(X), mujer(Y).
 %Agregar una regla para identificar a las PAREJAS.
+parejas(Z, Y) :- padre(Z, X) , madre(Y, X).
